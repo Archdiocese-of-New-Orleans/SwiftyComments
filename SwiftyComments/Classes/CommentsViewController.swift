@@ -181,7 +181,7 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
         return swipeToHide && isCellExpanded(indexPath: indexPath)
     }
     
-    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+    open func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
         guard commentsView(tableView, isCommentExpandable: _currentlyDisplayed[indexPath.row], atIndexPath: indexPath) else { return nil }
         
