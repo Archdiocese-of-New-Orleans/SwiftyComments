@@ -205,7 +205,7 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
         return [collapseAction]
     }
     
-    public func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+    open func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
         var options = SwipeTableOptions()
         options.expansionStyle = .destructive(automaticallyDelete: false)
         return options
